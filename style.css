@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #1b1b1b;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #282828;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: 2px solid #7c7a7a;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: slideDown 1.2s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 18px;
+}
+
+.nav-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 120px auto 50px auto;
+    background-color: #333;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+p, li {
+    line-height: 1.8;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.skills,
+.experience {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills div,
+.experience div {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.skills div:last-child,
+.experience div:last-child {
+    margin-right: 0;
+}
+
+.skills ul {
+    list-style-type: square;
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #a9a9a9;
+    font-size: 14px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Portfolio Section */
+.portfolio-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.portfolio-link:hover {
+    background-color: #292727;
+    transform: scale(1.05);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
